@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Belajar Javascript - NIOMIC</title>
+    <style>
+      .contohstyle {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="programs()" name="button">Jalankan</button>
+    <br>
+    <br>
+    <hr>
+    Atribut <b>removeNamedItem()</b> : <br>
+    <input value="Inputan"/> <br>
+    <hr>
+    Atribut <b>setNamedItem()</b> : <br>
+    <i>contoh</i>  <br>
+    <hr>
+    Atribut <b>value()</b>
+    <p id="mons">contoh</p>
+    <hr>
+
+    <script type="text/javascript">
+      function programs() {
+        var one = document.getElementsByTagName("input")[0];
+        one.attributes.removeNamedItem("value");
+
+        var three = document.getElementsByTagName("i")[0];
+        var four = document.createAttribute("class");
+        four.value = "contohstyle";
+        three.attributes.setNamedItem(four);
+
+        var five = document.getElementsByTagName("button")[0];
+        var six = five.attributes[2].value;
+        document.getElementById("mons").innerHTML = six;
+      }
+    </script>
+  </body>
+</html>
